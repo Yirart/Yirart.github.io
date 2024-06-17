@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Assure que le contenu ne déborde pas */
+}
+
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place la vidéo derrière les autres contenus */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    width: 300px;
+    margin-left: -60px;
+    margin-top: -10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: '';
+    background: #ff3d00;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    max-width: 900px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.content h1 {
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.black-box {
+    background-color: black;
+    position: relative;
+    padding: 800px;
+    color: white;
+    text-align: center;
+}
+
+.gameplay-img {
+    width: 650px; /* Ajustez la taille selon vos besoins */
+    height: auto; /* Gardez le ratio d'aspect */
+    margin-top: -9000px; /* Ajoutez un peu d'espace au-dessus de l'image */
+    margin-left: -350px; /* Déplacez l'image vers la gauche */
+}
+
+.black-box h2 {
+    font-family: Algerian, fantasy;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 100px; /* Ajustez cette valeur pour monter le h2 */
+    word-spacing: 10px;
+    margin-left: -580px;
+}
+
+.Enemy-img {
+    width: 350px; /* Ajustez la taille selon vos besoins */
+    height: auto; /* Gardez le ratio d'aspect */
+    margin-top: 200px; /* Ajoutez un peu d'espace au-dessus de l'image */
+    margin-left: -200px; /* Déplacez l'image vers la gauche */
+}
+
+.black-box h3 {
+    font-family: Algerian, fantasy;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 60px; /* Ajustez cette valeur pour monter le h2 */
+    word-spacing: 10px;
+    margin-left: -680px;
+}
+
+.black-box .image-row {
+    display: flex;
+    flex-direction: column; /* Changez la direction pour une colonne */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.black-box .universal-img, .black-box .player-img {
+    width: 550px; /* Ajustez la taille selon vos besoins */
+    height: auto; /* Gardez le ratio d'aspect */
+    margin: 0 20px; /* Espace entre les images */
+}
+
+.black-box .image-row h4 {
+    font-family: Algerian, fantasy;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px; /* Ajustez cette valeur pour contrôler l'espacement au-dessus du h4 */
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-links li a {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+    }
+}
+
